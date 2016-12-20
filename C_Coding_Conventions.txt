@@ -30,7 +30,7 @@
 	
 2. Common Data Types
 ---------------------
-	* Always used sized interger data types defined in "stdint.h"
+	Always used sized interger data types defined in "stdint.h"
 	wherever possible. they are cross platform compatible and easier
 	to read
 	
@@ -43,4 +43,52 @@
 	uint64_t	---	unsigned long long
 	int64_t		---	long long
 	
-3. 
+2. External Libraries
+----------------------
+	* Any element of the external library (function/ variable / define) should 
+	start with library name in all capitals
+	
+	eg: uint8_t AVR_GPIO_Mcu_Type;
+		void AVR_GPIO_Get_Status(void);
+	
+	* The remaining part of the variable name / function name should be seperated
+	by underscores(_) and each part starting with upper case (snake case)
+	
+	eg: AVR_GPIO_Get_Status(void);
+	
+	* Any defines within the library or in your code should be in ALL CAPITAL
+	
+	eg: #define AVR_GPIO_MCU_TYPE 10
+	
+3. Datatypes & Variables
+--------------------------
+	Variable names should visibly represent their scope. Weather they are
+	GLOBAL, AUTO / LOCAL or STATIC
+	
+	GLOBAL			---	<vatiable_name>_g
+	STATIC			---	<variable_name>_s
+	LOCAL/AUTO		--- <variable_name>
+	GLOBAL STATIC	---	<variable_name>_gs
+
+4. ENUMERATIONS
+----------------
+	Enumeration name should visibly specify weather it's a normal enum name
+	or it has be typedef'ed
+	
+	normal
+	-------
+	enum
+	{
+		....
+	} example_enum;
+	
+	typedef'ed
+	-----------
+	typedef enum example_enum_t
+	{
+		...
+	} example_enum_t;
+	
+	Enumeration ELEMENTS SHOULD BE WRITTEN IN ALL CAPITAL LETTERS AND SHOULD
+	HAVE A VALUE ASSIGNED TO THEM. Do not leave the values to be assigned by
+	the compiler as that can lead to confusion.
