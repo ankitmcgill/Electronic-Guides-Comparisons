@@ -56,9 +56,26 @@
 	
 	eg: AVR_GPIO_Get_Status(void);
 	
-	* Any defines within the library or in your code should be in ALL CAPITAL
+	* Any defines within the library or in your code should be in ALL CAPITALS
 	
 	eg: #define AVR_GPIO_MCU_TYPE 10
+	
+	* Every library header and source file should have a library header listing
+	the name of library, author name & contact details, date of creation and
+	purpose
+	
+	eg:
+		////////////////////////////////////////////////////////////////
+		// AVR GPIO LIBRARY
+		//
+		// NOVEMBER 30, 2016
+		//
+		// ANKIT BHATNAGAR
+		// ANKIT.BHATNAGARINDIA@GMAIL.COM
+		//
+		// REFERENCE:
+		// http://www.avrfreaks.net/forum/macros-ddr-and-port-pin-name
+		////////////////////////////////////////////////////////////////
 	
 3. Datatypes & Variables
 --------------------------
