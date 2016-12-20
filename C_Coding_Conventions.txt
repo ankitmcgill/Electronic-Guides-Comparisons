@@ -1,0 +1,46 @@
+*************************************************************************************
+** C CODING CONVENTIONS *************************************************************
+*************************************************************************************
+** DECEMBER 20 2016
+**
+** ANKIT BHATNAGAR
+** ANKIT.BHATNAGARINDIA@GMAIL.COM
+**
+** COMMON C CODING CONVENTIONS THAT I NEED TO FOLLOW
+** ACROSS MY C CODE ACCROSS ALL PLATFORMS (AVR, ARM ETC.)
+**
+** Reference
+**		1. https://www.kernel.org/doc/Documentation/CodingStyle
+**		2. https://www.gnu.org/prep/standards/standards.html
+*************************************************************************************
+
+1. Indentation
+---------------
+	Indentation is 8 characters. Some people use 4 or even 2 as 8 makes
+	the text go too much to the right of the screen but thats wrong.
+	8 makes it completely unambigously clear of the level blocks and
+	thus makes reading code easier.
+	
+	If you are indenting code so much that it's going off a 80 terminal
+	screen, thenm the issue is with the code as you should not be 
+	using somany levels of indenting in your code in the first place.
+	fix the code logic
+	
+	Always, always stick with indentation = 8 !
+	
+2. Common Data Types
+---------------------
+	* Always used sized interger data types defined in "stdint.h"
+	wherever possible. they are cross platform compatible and easier
+	to read
+	
+	uint8_t		---	unsigned char
+	int8_t		---	char
+	uint16_t	---	unsigned short
+	int16_t		---	short
+	uint32_t	---	unsigned int / long
+	int32_t		---	int / long
+	uint64_t	---	unsigned long long
+	int64_t		---	long long
+	
+3. 
