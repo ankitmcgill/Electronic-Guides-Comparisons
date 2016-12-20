@@ -15,7 +15,7 @@
 *************************************************************************************
 
 1. Indentation
----------------
+================
 	Indentation is 8 characters. Some people use 4 or even 2 as 8 makes
 	the text go too much to the right of the screen but thats wrong.
 	8 makes it completely unambigously clear of the level blocks and
@@ -29,7 +29,7 @@
 	Always, always stick with indentation = 8 !
 	
 2. Common Data Types
----------------------
+=======================
 	Always used sized interger data types defined in "stdint.h"
 	wherever possible. they are cross platform compatible and easier
 	to read
@@ -43,8 +43,8 @@
 	uint64_t	---	unsigned long long
 	int64_t		---	long long
 	
-2. External Libraries
-----------------------
+3. External Libraries
+=======================
 	* Any element of the external library (function/ variable / define) should 
 	start with library name in all capitals
 	
@@ -77,8 +77,8 @@
 		// http://www.avrfreaks.net/forum/macros-ddr-and-port-pin-name
 		////////////////////////////////////////////////////////////////
 	
-3. Datatypes & Variables
---------------------------
+4. Datatypes & Variables
+==========================
 	Variable names should visibly represent their scope. Weather they are
 	GLOBAL, AUTO / LOCAL or STATIC
 	
@@ -87,8 +87,8 @@
 	LOCAL/AUTO		--- <variable_name>
 	GLOBAL STATIC	---	<variable_name>_gs
 
-4. ENUMERATIONS
-----------------
+5. ENUMERATIONS
+================
 	Enumeration name should visibly specify weather it's a normal enum name
 	or it has be typedef'ed
 	
