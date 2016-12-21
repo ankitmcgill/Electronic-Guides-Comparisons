@@ -27,8 +27,23 @@
 	fix the code logic
 	
 	Always, always stick with indentation = 8 !
+	
+2. COMMENTS
+============
+	* Comments should always be in ALL CAPITALS
+	
+	* NEVER write the comment on the same line as a code segment. Always
+	write the comment, on the line preceeding the code line.
+	eg:
+		int height = 10; //SET INITIAL HEIGHT (WRONG)
+		
+		//SET INITIAL HEIGHT (CORRECT)
+		int height = 10;
+	
+	*Dont use the /* & */ pair for multi line comments. Use // on each line
+	as using /* prevents block commenting out of code during testing / debugging
 
-2. DEFINES
+3. DEFINES
 ============
 	* Define name should be in ALL CAPITAL
 	
@@ -42,7 +57,7 @@
 	eg:
 		#define AVR_OPERARTION(a,b)	((a)+(b)+1)
 
-3. Common Data Types
+4. Common Data Types
 =======================
 	Always used sized interger data types defined in "stdint.h"
 	wherever possible. they are cross platform compatible and easier
@@ -57,7 +72,7 @@
 	uint64_t	---	unsigned long long
 	int64_t		---	long long
 	
-4. External Libraries
+5. External Libraries
 =======================
 	* Any element of the external library (function/ variable / define) should 
 	start with library name in all capitals
@@ -100,7 +115,7 @@
 		.....
 		#endif
 		
-5. Datatypes & Variables
+6. Datatypes & Variables
 ==========================
 	Variable names should visibly represent their scope. Weather they are
 	GLOBAL, AUTO / LOCAL or STATIC
@@ -110,7 +125,7 @@
 	LOCAL/AUTO		--- <variable_name>
 	GLOBAL STATIC	---	<variable_name>_gs
 
-6. ENUMERATIONS / STRUCTS / UNIONS
+7. ENUMERATIONS / STRUCTS / UNIONS
 ====================================
 	Enumeration name should visibly specify weather it's a normal enum name
 	or it has be typedef'ed
@@ -136,7 +151,7 @@
 	HAVE A VALUE ASSIGNED TO THEM. Do not leave the values to be assigned by
 	the compiler as that can lead to confusion.
 	
-7. FUNCTIONS
+8. FUNCTIONS
 ==============
 	* Function name should be in snake case letters with each part separated with
 	an underscore(_)
@@ -144,6 +159,16 @@
 	eg: Set_Pins(void);
 	
 	* If the function takes no arguments, make that explicit by using 'void'
+	
+	* Always at the start of fucntion, write 2-3 line summary of what the function
+	does. Then leave an empty line and then start the function code.
+	eg:
+		void AVR_GPIO_Init(void)
+		{
+			//INITIALIZES AVR GPIO PINS
+			
+			... actual code ...
+		}
 	
 	* All the functions belonging to the same module / library should have their
 	name prefixed with the module name in all capitals
