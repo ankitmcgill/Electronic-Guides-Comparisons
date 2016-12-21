@@ -27,8 +27,22 @@
 	fix the code logic
 	
 	Always, always stick with indentation = 8 !
+
+2. DEFINES
+============
+	* Define name should be in ALL CAPITAL
 	
-2. Common Data Types
+	* Defines belonging to the a library / module should have the name
+	of the module prepended to the define
+	eg:
+		#define AVR_GPIO_HIGH (1)
+	
+	* Always take care and use paranthesis to protect the order of operation
+	in macros
+	eg:
+		#define AVR_OPERARTION(a,b)	((a)+(b)+1)\
+
+3. Common Data Types
 =======================
 	Always used sized interger data types defined in "stdint.h"
 	wherever possible. they are cross platform compatible and easier
@@ -43,7 +57,7 @@
 	uint64_t	---	unsigned long long
 	int64_t		---	long long
 	
-3. External Libraries
+4. External Libraries
 =======================
 	* Any element of the external library (function/ variable / define) should 
 	start with library name in all capitals
@@ -77,7 +91,16 @@
 		// http://www.avrfreaks.net/forum/macros-ddr-and-port-pin-name
 		////////////////////////////////////////////////////////////////
 	
-4. Datatypes & Variables
+	* always used INCLUDE GUARDS when writing any external library. This prevents
+	circular include issues and errors
+	
+	eg:
+		#ifndef _AVR_GPIO_H_
+		#define _AVR_GPIO_H_
+		.....
+		#endif
+		
+5. Datatypes & Variables
 ==========================
 	Variable names should visibly represent their scope. Weather they are
 	GLOBAL, AUTO / LOCAL or STATIC
@@ -87,10 +110,13 @@
 	LOCAL/AUTO		--- <variable_name>
 	GLOBAL STATIC	---	<variable_name>_gs
 
-5. ENUMERATIONS
-================
+6. ENUMERATIONS / STRUCTS / UNIONS
+====================================
 	Enumeration name should visibly specify weather it's a normal enum name
 	or it has be typedef'ed
+	
+	Name of the enumeration should be in all small letters. Use all capitals
+	only for defines !
 	
 	normal
 	-------
@@ -109,3 +135,17 @@
 	Enumeration ELEMENTS SHOULD BE WRITTEN IN ALL CAPITAL LETTERS AND SHOULD
 	HAVE A VALUE ASSIGNED TO THEM. Do not leave the values to be assigned by
 	the compiler as that can lead to confusion.
+	
+7. FUNCTIONS
+==============
+	* Function name should be in snake case letters with each part separated with
+	an underscore(_)
+	
+	eg: Set_Pins(void);
+	
+	* If the function takes no arguments, make that explicit by using 'void'
+	
+	* All the functions belonging to the same module / library should have their
+	name prefixed with the module name in all capitals
+	
+	eg: AVR_GUART_Init(void);
