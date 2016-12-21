@@ -40,7 +40,7 @@
 	* Always take care and use paranthesis to protect the order of operation
 	in macros
 	eg:
-		#define AVR_OPERARTION(a,b)	((a)+(b)+1)\
+		#define AVR_OPERARTION(a,b)	((a)+(b)+1)
 
 3. Common Data Types
 =======================
